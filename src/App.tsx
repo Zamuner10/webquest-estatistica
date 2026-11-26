@@ -40,9 +40,20 @@ export default function App() {
     <div className="min-h-screen overflow-x-hidden bg-[#101510] font-sans text-[#f0f1e9] selection:bg-[#c8ec91] selection:text-[#101510]">
       <header className="border-b border-white/10">
         <div className="mx-auto flex h-23 max-w-[1320px] items-center justify-between px-6 md:px-12">
-          <a href="#home" onClick={() => navigate(false)} className="flex min-h-11 items-center gap-2.5 text-xl font-semibold tracking-tight">
-            <span className="font-serif text-4xl text-[#c8ec91]">∑</span> WebQuest <span className="text-[#c8ec91]">Estatística</span>
-            <span className="ml-1 mt-1 h-1.5 w-1.5 rounded-full bg-[#c8ec91]" />
+          <a href="#home" onClick={() => navigate(false)} className="group flex min-h-11 items-center gap-3">
+            <img
+              src="/logo.png"
+              alt="Logo WebQuest Estatística"
+              className="h-11 w-11 rounded-xl border border-[#c8ec91]/30 object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <span className="flex flex-col leading-none">
+              <span className="text-lg font-semibold tracking-tight text-[#f0f1e9]">
+                WebQuest <span className="text-[#c8ec91]">Estatística</span>
+              </span>
+              <span className="mt-1 text-[10px] font-medium tracking-[0.18em] text-[#b9c0b5] uppercase">
+                Estatística Aplicada · FATEC Osasco
+              </span>
+            </span>
           </a>
 
           <nav aria-label="Navegação principal" className="hidden items-center gap-9 text-sm md:flex">
@@ -300,7 +311,7 @@ export default function App() {
           </section>
         )}
 
-<section id="about" className="grid items-center gap-9 py-16 md:grid-cols-[.85fr_1.15fr]">
+        <section id="about" className="grid items-center gap-9 py-16 md:grid-cols-[.85fr_1.15fr]">
           <div className="flex items-start gap-5">
             <div className="h-24 w-24 shrink-0 overflow-hidden rounded-full border border-[#c8ec91]/25 bg-[#20291e]">
               <img src="/vinicius.jpg" alt="Vinicius Klocke Zamuner" className="h-full w-full object-cover" />
@@ -330,7 +341,7 @@ export default function App() {
         </section>
       </main>
 
-<footer className="border-t border-white/10">
+      <footer className="border-t border-white/10">
         <div className="mx-auto flex max-w-[1320px] flex-col justify-between gap-5 px-6 py-7 text-xs text-[#b9c0b5] md:flex-row md:items-center md:px-12">
           <p>
             © {new Date().getFullYear()} WebQuest Estatística · Autor: Vinicius Klocke Zamuner{' '}
